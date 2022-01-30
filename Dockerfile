@@ -14,13 +14,13 @@ RUN \
     jq && \
   echo "**** install runtime packages ****" && \
   if [ -z ${DOPLARR_RELEASE+x} ]; then \
-    DOPLARR_RELEASE=$(curl -sX GET "https://api.github.com/repos/doplarr/doplarr/releases/latest" \
+    DOPLARR_RELEASE=$(curl -sX GET "https://api.github.com/repos/kiranshila/doplarr/releases/latest" \
     | jq -r .tag_name); \
   fi && \
   DOPLARR_VER=${DOPLARR_RELEASE#v} && \
   curl -o \
   /tmp/doplarr.jar -L \
-    "https://github.com/doplarr/doplarr/releases/download/v${DOPLARR_VER}/doplarr.jar" && \
+    "https://github.com/kiranshila/doplarr/releases/download/v${DOPLARR_VER}/doplarr.jar" && \
   mkdir -p /app/doplarr/bin && \
   cp /tmp/doplarr.jar -d /app/doplarr/bin && \
   chmod +x /app/doplarr/bin/doplarr.jar && \
