@@ -3,7 +3,7 @@
 # project information
 project_name: doplarr
 project_url: "https://github.com/kiranshila/Doplarr"
-project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/doplarr-logo.png"
+project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/doplarr-logo_title.png"
 project_blurb: |
   [{{ project_name|capitalize }}]({{ project_url }}) is an *arr request bot for Discord."
 
