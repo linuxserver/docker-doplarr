@@ -42,7 +42,7 @@ Find us at:
 
 [Doplarr](https://github.com/kiranshila/Doplarr) is an *arr request bot for Discord."
 
-[![doplarr](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/doplarr.png)](https://github.com/kiranshila/Doplarr)
+[![doplarr](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/doplarr-logo_title.png)](https://github.com/kiranshila/Doplarr)
 
 ## Supported Architectures
 
@@ -84,14 +84,14 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - DISCORD__TOKEN=
+      - TZ=America/New_York
+      - DISCORD__TOKEN=<discord__token>
       - OVERSEERR__API=
       - OVERSEERR__URL=http://localhost:5055
       - RADARR__API=
       - RADARR__URL=http://localhost:7878
       - SONARR__API=
       - SONARR__URL=http://localhost:8989
-      - TZ=America/New_York
       - DISCORD__MAX_RESULTS=25 #optional
       - DISCORD__ROLE_ID= #optional
       - DISCORD__REQUESTED_MSG_STYLE=:plain #optional
@@ -114,14 +114,14 @@ docker run -d \
   --name=doplarr \
   -e PUID=1000 \
   -e PGID=1000 \
-  -e DISCORD__TOKEN= \
+  -e TZ=America/New_York \
+  -e DISCORD__TOKEN=<discord__token> \
   -e OVERSEERR__API= \
   -e OVERSEERR__URL=http://localhost:5055 \
   -e RADARR__API= \
   -e RADARR__URL=http://localhost:7878 \
   -e SONARR__API= \
   -e SONARR__URL=http://localhost:8989 \
-  -e TZ=America/New_York \
   -e DISCORD__MAX_RESULTS=25 `#optional` \
   -e DISCORD__ROLE_ID= `#optional` \
   -e DISCORD__REQUESTED_MSG_STYLE=:plain `#optional` \
@@ -145,14 +145,14 @@ Container images are configured using parameters passed at runtime (such as thos
 | :----: | --- |
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
-| `-e DISCORD__TOKEN=` | Specify your discord bot token. |
+| `-e TZ=America/New_York` | Specify a timezone to use EG America/New_York |
+| `-e DISCORD__TOKEN=<discord__token>` | Specify your discord bot token. |
 | `-e OVERSEERR__API=` | Specify your Overseerr API key. Leave blank if using Radarr/Sonarr. |
 | `-e OVERSEERR__URL=http://localhost:5055` | Specify your Overseerr URL. Leave blank if using Radarr/Sonarr. |
 | `-e RADARR__API=` | Specify your Radarr API key. Leave blank if using Overseerr. |
 | `-e RADARR__URL=http://localhost:7878` | Specify your Radarr URL. Leave blank if using Overseerr. |
 | `-e SONARR__API=` | Specify your Sonarr API key. Leave blank if using Overseerr. |
 | `-e SONARR__URL=http://localhost:8989` | Specify your Sonarr URL. Leave blank if using Overseerr. |
-| `-e TZ=America/New_York` | Specify a timezone to use EG America/New_York |
 | `-e DISCORD__MAX_RESULTS=25` | Sets the maximum size of the search results selection |
 | `-e DISCORD__ROLE_ID=` | The discord role id for users of the bot (omitting this lets everyone on the server use the bot) |
 | `-e DISCORD__REQUESTED_MSG_STYLE=:plain` | Sets the style of the request alert message. One of `:plain` `:embed` `:none` |
