@@ -1,0 +1,40 @@
+FROM ghcr.io/linuxserver/baseimage-alpine:3.15
+
+# set version label
+ARG BUILD_DATE
+ARG VERSION
+ARG DOPLARR_RELEASE
+LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="nemchik"
+
+RUN \
+  echo "**** install build packages ****" && \
+  apk add --no-cache --virtual=build-dependencies \
+    curl \
+    jq && \
+  echo "**** install runtime packages ****" && \
+  if [ -z ${DOPLARR_RELEASE+x} ]; then \
+    DOPLARR_RELEASE=$(curl -sX GET "https://api.github.com/repos/doplarr/doplarr/releases/latest" \
+    | jq -r .tag_name); \
+  fi && \
+  DOPLARR_VER=${DOPLARR_RELEASE#v} && \
+  curl -o \
+  /tmp/doplarr.jar -L \
+    "https://github.com/doplarr/doplarr/releases/download/v${DOPLARR_VER}/doplarr.jar" && \
+  mkdir -p /app/doplarr/bin && \
+  cp /tmp/doplarr.jar -d /app/doplarr/bin && \
+  chmod +x /app/doplarr/bin/doplarr.jar && \
+  apk add --no-cache \
+    openjdk16-jre-headless && \
+  echo "**** cleanup ****" && \
+  apk del --purge \
+    build-dependencies && \
+  rm -rf \
+    /root/.cache \
+    /tmp/*
+
+# copy local files
+COPY root/ /
+
+# ports and volumes
+VOLUME /config

@@ -1,0 +1,15 @@
+#!/usr/bin/with-contenv bash
+
+if [[ "$(uname -m)" == "armv7l" ]]; then
+    sleep infinity
+fi
+
+# add option to pass runtime arguments
+IFS=" " read -r -a RUN_ARRAY <<< "$JAVA_OPTS"
+
+cd /app/doplarr/bin || exit
+
+exec \
+    s6-setuidgid abc java \
+    "${RUN_ARRAY[@]}" \
+    -jar /app/doplarr/bin/doplarr.jar
