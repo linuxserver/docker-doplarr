@@ -25,14 +25,14 @@ common_param_env_vars_enabled: true
 param_container_name: "{{ project_name }}"
 param_usage_include_env: true
 param_env_vars:
-  - { env_var: "DISCORD__TOKEN", env_value: "", desc: "Specify your discord bot token." }
+  - { env_var: "TZ", env_value: "America/New_York", desc: "Specify a timezone to use EG America/New_York" }
+  - { env_var: "DISCORD__TOKEN", env_value: "<discord__token>", desc: "Specify your discord bot token." }
   - { env_var: "OVERSEERR__API", env_value: "", desc: "Specify your Overseerr API key. Leave blank if using Radarr/Sonarr." }
   - { env_var: "OVERSEERR__URL", env_value: "http://localhost:5055", desc: "Specify your Overseerr URL. Leave blank if using Radarr/Sonarr." }
   - { env_var: "RADARR__API", env_value: "", desc: "Specify your Radarr API key. Leave blank if using Overseerr." }
   - { env_var: "RADARR__URL", env_value: "http://localhost:7878", desc: "Specify your Radarr URL. Leave blank if using Overseerr." }
   - { env_var: "SONARR__API", env_value: "", desc: "Specify your Sonarr API key. Leave blank if using Overseerr." }
   - { env_var: "SONARR__URL", env_value: "http://localhost:8989", desc: "Specify your Sonarr URL. Leave blank if using Overseerr." }
-  - { env_var: "TZ", env_value: "America/New_York", desc: "Specify a timezone to use EG America/New_York" }
 param_usage_include_vols: true
 param_volumes:
   - { vol_path: "/config", vol_host_path: "</path/to/appdata/config>", desc: "Contains all relevant configuration files." }
