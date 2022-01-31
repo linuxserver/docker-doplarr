@@ -4,8 +4,23 @@ if [[ "$(uname -m)" == "armv7l" ]]; then
     sleep infinity
 fi
 
+if [[ ${DISCORD__TOKEN+x} == "" ]]; then
+cat <<-EOF
+    ********************************************************
+    ********************************************************
+    *                                                      *
+    *                         !!!!                         *
+    *    DISCORD__TOKEN environment variable is not set    *
+    *                                                      *
+    *                                                      *
+    ********************************************************
+    ********************************************************
+EOF
+    sleep infinity
+fi
+
 # add option to pass runtime arguments
-IFS=" " read -r -a RUN_ARRAY <<< "$JAVA_OPTS"
+IFS=" " read -r -a RUN_ARRAY <<< "${JAVA_OPTS}"
 
 cd /app/doplarr/bin || exit
 
