@@ -99,6 +99,8 @@ services:
       - DISCORD__REQUESTED_MSG_STYLE=:plain #optional
       - SONARR__QUALITY_PROFILE=<not_set_by_default> #optional
       - RADARR__QUALITY_PROFILE=<not_set_by_default> #optional
+      - SONARR__ROOTFOLDER=<not_set_by_default> #optional
+      - RADARR__ROOTFOLDER=<not_set_by_default> #optional
       - SONARR__LANGUAGE_PROFILE=<not_set_by_default> #optional
       - OVERSEERR__DEFAULT_ID=<not_set_by_default> #optional
       - PARTIAL_SEASONS=true #optional
@@ -129,6 +131,8 @@ docker run -d \
   -e DISCORD__REQUESTED_MSG_STYLE=:plain `#optional` \
   -e SONARR__QUALITY_PROFILE=<not_set_by_default> `#optional` \
   -e RADARR__QUALITY_PROFILE=<not_set_by_default> `#optional` \
+  -e SONARR__ROOTFOLDER=<not_set_by_default> `#optional` \
+  -e RADARR__ROOTFOLDER=<not_set_by_default> `#optional` \
   -e SONARR__LANGUAGE_PROFILE=<not_set_by_default> `#optional` \
   -e OVERSEERR__DEFAULT_ID=<not_set_by_default> `#optional` \
   -e PARTIAL_SEASONS=true `#optional` \
@@ -160,7 +164,9 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e DISCORD__REQUESTED_MSG_STYLE=:plain` | Sets the style of the request alert message. One of `:plain` `:embed` `:none` |
 | `-e SONARR__QUALITY_PROFILE=<not_set_by_default>` | The name of the quality profile to use by default for Sonarr |
 | `-e RADARR__QUALITY_PROFILE=<not_set_by_default>` | The name of the quality profile to use by default for Radarr |
-| `-e SONARR__LANGUAGE_PROFILE=<not_set_by_default>` | The name of the language profile to use by default for Radarr |
+| `-e SONARR__ROOTFOLDER=<not_set_by_default>` | The root folder to use by default for Sonarr |
+| `-e RADARR__ROOTFOLDER=<not_set_by_default>` | The root folder to use by default for Radarr |
+| `-e SONARR__LANGUAGE_PROFILE=<not_set_by_default>` | The name of the language profile to use by default for Sonarr |
 | `-e OVERSEERR__DEFAULT_ID=<not_set_by_default>` | The Overseerr user id to use by default if there is no associated discord account for the requester |
 | `-e PARTIAL_SEASONS=true` | Sets whether users can request partial seasons. |
 | `-e LOG_LEVEL=:info` | The log level for the logging backend. This can be changed for debugging purposes. One of trace `:debug` `:info` `:warn` `:error` `:fatal` `:report` |
