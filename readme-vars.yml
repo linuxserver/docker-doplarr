@@ -44,7 +44,6 @@ cap_add_param: false
 opt_param_usage_include_env: true
 opt_param_env_vars:
   - { env_var: "DISCORD__MAX_RESULTS", env_value: "25", desc: "Sets the maximum size of the search results selection" }
-  - { env_var: "DISCORD__ROLE_ID", env_value: "<not_set_by_default>", desc: "The discord role id for users of the bot (omitting this lets everyone on the server use the bot)" }
   - { env_var: "DISCORD__REQUESTED_MSG_STYLE", env_value: ":plain", desc: "Sets the style of the request alert message. One of `:plain` `:embed` `:none`" }
   - { env_var: "SONARR__QUALITY_PROFILE", env_value: "<not_set_by_default>", desc: "The name of the quality profile to use by default for Sonarr" }
   - { env_var: "RADARR__QUALITY_PROFILE", env_value: "<not_set_by_default>", desc: "The name of the quality profile to use by default for Radarr" }
@@ -78,5 +77,6 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "01.05.22:", desc: "Remove `DISCORD__ROLE_ID` environment variable, see [Permissions Configuration](https://github.com/kiranshila/Doplarr/blob/main/docs/configuration.md#permissions)." }
   - { date: "30.01.22:", desc: "Variable adjustments." }
   - { date: "30.01.22:", desc: "Initial Release." }
