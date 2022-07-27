@@ -26,16 +26,16 @@ param_container_name: "{{ project_name }}"
 param_usage_include_env: true
 param_env_vars:
   - { env_var: "TZ", env_value: "America/New_York", desc: "Specify a timezone to use EG America/New_York" }
-  - { env_var: "DISCORD__TOKEN", env_value: "<discord__token>", desc: "Specify your discord bot token." }
-  - { env_var: "OVERSEERR__API", env_value: "<overseerr__api>", desc: "Specify your Overseerr API key. Leave blank if using Radarr/Sonarr." }
+  - { env_var: "DISCORD__TOKEN", env_value: "", desc: "Specify your discord bot token." }
+  - { env_var: "OVERSEERR__API", env_value: "", desc: "Specify your Overseerr API key. Leave blank if using Radarr/Sonarr." }
   - { env_var: "OVERSEERR__URL", env_value: "http://localhost:5055", desc: "Specify your Overseerr URL. Leave blank if using Radarr/Sonarr." }
-  - { env_var: "RADARR__API", env_value: "<radarr__api>", desc: "Specify your Radarr API key. Leave blank if using Overseerr." }
+  - { env_var: "RADARR__API", env_value: "", desc: "Specify your Radarr API key. Leave blank if using Overseerr." }
   - { env_var: "RADARR__URL", env_value: "http://localhost:7878", desc: "Specify your Radarr URL. Leave blank if using Overseerr." }
-  - { env_var: "SONARR__API", env_value: "<sonarr__api>", desc: "Specify your Sonarr API key. Leave blank if using Overseerr." }
+  - { env_var: "SONARR__API", env_value: "", desc: "Specify your Sonarr API key. Leave blank if using Overseerr." }
   - { env_var: "SONARR__URL", env_value: "http://localhost:8989", desc: "Specify your Sonarr URL. Leave blank if using Overseerr." }
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "</path/to/appdata/config>", desc: "Contains all relevant configuration files." }
+  - { vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Contains all relevant configuration files." }
 param_usage_include_ports: false
 param_device_map: false
 cap_add_param: false
@@ -45,15 +45,15 @@ opt_param_usage_include_env: true
 opt_param_env_vars:
   - { env_var: "DISCORD__MAX_RESULTS", env_value: "25", desc: "Sets the maximum size of the search results selection" }
   - { env_var: "DISCORD__REQUESTED_MSG_STYLE", env_value: ":plain", desc: "Sets the style of the request alert message. One of `:plain` `:embed` `:none`" }
-  - { env_var: "SONARR__QUALITY_PROFILE", env_value: "<not_set_by_default>", desc: "The name of the quality profile to use by default for Sonarr" }
-  - { env_var: "RADARR__QUALITY_PROFILE", env_value: "<not_set_by_default>", desc: "The name of the quality profile to use by default for Radarr" }
-  - { env_var: "SONARR__ROOTFOLDER", env_value: "<not_set_by_default>", desc: "The root folder to use by default for Sonarr" }
-  - { env_var: "RADARR__ROOTFOLDER", env_value: "<not_set_by_default>", desc: "The root folder to use by default for Radarr" }
-  - { env_var: "SONARR__LANGUAGE_PROFILE", env_value: "<not_set_by_default>", desc: "The name of the language profile to use by default for Sonarr" }
-  - { env_var: "OVERSEERR__DEFAULT_ID", env_value: "<not_set_by_default>", desc: "The Overseerr user id to use by default if there is no associated discord account for the requester" }
+  - { env_var: "SONARR__QUALITY_PROFILE", env_value: "", desc: "The name of the quality profile to use by default for Sonarr" }
+  - { env_var: "RADARR__QUALITY_PROFILE", env_value: "", desc: "The name of the quality profile to use by default for Radarr" }
+  - { env_var: "SONARR__ROOTFOLDER", env_value: "", desc: "The root folder to use by default for Sonarr" }
+  - { env_var: "RADARR__ROOTFOLDER", env_value: "", desc: "The root folder to use by default for Radarr" }
+  - { env_var: "SONARR__LANGUAGE_PROFILE", env_value: "", desc: "The name of the language profile to use by default for Sonarr" }
+  - { env_var: "OVERSEERR__DEFAULT_ID", env_value: "", desc: "The Overseerr user id to use by default if there is no associated discord account for the requester" }
   - { env_var: "PARTIAL_SEASONS", env_value: "true", desc: "Sets whether users can request partial seasons." }
   - { env_var: "LOG_LEVEL", env_value: ":info", desc: "The log level for the logging backend. This can be changed for debugging purposes. One of trace `:debug` `:info` `:warn` `:error` `:fatal` `:report`" }
-  - { env_var: "JAVA_OPTS", env_value: "<not_set_by_default>", desc: "For passing additional java options." }
+  - { env_var: "JAVA_OPTS", env_value: "", desc: "For passing additional java options." }
 
 opt_param_usage_include_vols: false
 opt_param_usage_include_ports: false
