@@ -88,26 +88,26 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/New_York
-      - DISCORD__TOKEN=<discord__token>
-      - OVERSEERR__API=<overseerr__api>
+      - DISCORD__TOKEN=
+      - OVERSEERR__API=
       - OVERSEERR__URL=http://localhost:5055
-      - RADARR__API=<radarr__api>
+      - RADARR__API=
       - RADARR__URL=http://localhost:7878
-      - SONARR__API=<sonarr__api>
+      - SONARR__API=
       - SONARR__URL=http://localhost:8989
       - DISCORD__MAX_RESULTS=25 #optional
       - DISCORD__REQUESTED_MSG_STYLE=:plain #optional
-      - SONARR__QUALITY_PROFILE=<not_set_by_default> #optional
-      - RADARR__QUALITY_PROFILE=<not_set_by_default> #optional
-      - SONARR__ROOTFOLDER=<not_set_by_default> #optional
-      - RADARR__ROOTFOLDER=<not_set_by_default> #optional
-      - SONARR__LANGUAGE_PROFILE=<not_set_by_default> #optional
-      - OVERSEERR__DEFAULT_ID=<not_set_by_default> #optional
+      - SONARR__QUALITY_PROFILE= #optional
+      - RADARR__QUALITY_PROFILE= #optional
+      - SONARR__ROOTFOLDER= #optional
+      - RADARR__ROOTFOLDER= #optional
+      - SONARR__LANGUAGE_PROFILE= #optional
+      - OVERSEERR__DEFAULT_ID= #optional
       - PARTIAL_SEASONS=true #optional
       - LOG_LEVEL=:info #optional
-      - JAVA_OPTS=<not_set_by_default> #optional
+      - JAVA_OPTS= #optional
     volumes:
-      - </path/to/appdata/config>:/config
+      - /path/to/appdata/config:/config
     restart: unless-stopped
 ```
 
@@ -119,25 +119,25 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=America/New_York \
-  -e DISCORD__TOKEN=<discord__token> \
-  -e OVERSEERR__API=<overseerr__api> \
+  -e DISCORD__TOKEN= \
+  -e OVERSEERR__API= \
   -e OVERSEERR__URL=http://localhost:5055 \
-  -e RADARR__API=<radarr__api> \
+  -e RADARR__API= \
   -e RADARR__URL=http://localhost:7878 \
-  -e SONARR__API=<sonarr__api> \
+  -e SONARR__API= \
   -e SONARR__URL=http://localhost:8989 \
   -e DISCORD__MAX_RESULTS=25 `#optional` \
   -e DISCORD__REQUESTED_MSG_STYLE=:plain `#optional` \
-  -e SONARR__QUALITY_PROFILE=<not_set_by_default> `#optional` \
-  -e RADARR__QUALITY_PROFILE=<not_set_by_default> `#optional` \
-  -e SONARR__ROOTFOLDER=<not_set_by_default> `#optional` \
-  -e RADARR__ROOTFOLDER=<not_set_by_default> `#optional` \
-  -e SONARR__LANGUAGE_PROFILE=<not_set_by_default> `#optional` \
-  -e OVERSEERR__DEFAULT_ID=<not_set_by_default> `#optional` \
+  -e SONARR__QUALITY_PROFILE= `#optional` \
+  -e RADARR__QUALITY_PROFILE= `#optional` \
+  -e SONARR__ROOTFOLDER= `#optional` \
+  -e RADARR__ROOTFOLDER= `#optional` \
+  -e SONARR__LANGUAGE_PROFILE= `#optional` \
+  -e OVERSEERR__DEFAULT_ID= `#optional` \
   -e PARTIAL_SEASONS=true `#optional` \
   -e LOG_LEVEL=:info `#optional` \
-  -e JAVA_OPTS=<not_set_by_default> `#optional` \
-  -v </path/to/appdata/config>:/config \
+  -e JAVA_OPTS= `#optional` \
+  -v /path/to/appdata/config:/config \
   --restart unless-stopped \
   lscr.io/linuxserver/doplarr:latest
 ```
@@ -151,24 +151,24 @@ Container images are configured using parameters passed at runtime (such as thos
 | `-e PUID=1000` | for UserID - see below for explanation |
 | `-e PGID=1000` | for GroupID - see below for explanation |
 | `-e TZ=America/New_York` | Specify a timezone to use EG America/New_York |
-| `-e DISCORD__TOKEN=<discord__token>` | Specify your discord bot token. |
-| `-e OVERSEERR__API=<overseerr__api>` | Specify your Overseerr API key. Leave blank if using Radarr/Sonarr. |
+| `-e DISCORD__TOKEN=` | Specify your discord bot token. |
+| `-e OVERSEERR__API=` | Specify your Overseerr API key. Leave blank if using Radarr/Sonarr. |
 | `-e OVERSEERR__URL=http://localhost:5055` | Specify your Overseerr URL. Leave blank if using Radarr/Sonarr. |
-| `-e RADARR__API=<radarr__api>` | Specify your Radarr API key. Leave blank if using Overseerr. |
+| `-e RADARR__API=` | Specify your Radarr API key. Leave blank if using Overseerr. |
 | `-e RADARR__URL=http://localhost:7878` | Specify your Radarr URL. Leave blank if using Overseerr. |
-| `-e SONARR__API=<sonarr__api>` | Specify your Sonarr API key. Leave blank if using Overseerr. |
+| `-e SONARR__API=` | Specify your Sonarr API key. Leave blank if using Overseerr. |
 | `-e SONARR__URL=http://localhost:8989` | Specify your Sonarr URL. Leave blank if using Overseerr. |
 | `-e DISCORD__MAX_RESULTS=25` | Sets the maximum size of the search results selection |
 | `-e DISCORD__REQUESTED_MSG_STYLE=:plain` | Sets the style of the request alert message. One of `:plain` `:embed` `:none` |
-| `-e SONARR__QUALITY_PROFILE=<not_set_by_default>` | The name of the quality profile to use by default for Sonarr |
-| `-e RADARR__QUALITY_PROFILE=<not_set_by_default>` | The name of the quality profile to use by default for Radarr |
-| `-e SONARR__ROOTFOLDER=<not_set_by_default>` | The root folder to use by default for Sonarr |
-| `-e RADARR__ROOTFOLDER=<not_set_by_default>` | The root folder to use by default for Radarr |
-| `-e SONARR__LANGUAGE_PROFILE=<not_set_by_default>` | The name of the language profile to use by default for Sonarr |
-| `-e OVERSEERR__DEFAULT_ID=<not_set_by_default>` | The Overseerr user id to use by default if there is no associated discord account for the requester |
+| `-e SONARR__QUALITY_PROFILE=` | The name of the quality profile to use by default for Sonarr |
+| `-e RADARR__QUALITY_PROFILE=` | The name of the quality profile to use by default for Radarr |
+| `-e SONARR__ROOTFOLDER=` | The root folder to use by default for Sonarr |
+| `-e RADARR__ROOTFOLDER=` | The root folder to use by default for Radarr |
+| `-e SONARR__LANGUAGE_PROFILE=` | The name of the language profile to use by default for Sonarr |
+| `-e OVERSEERR__DEFAULT_ID=` | The Overseerr user id to use by default if there is no associated discord account for the requester |
 | `-e PARTIAL_SEASONS=true` | Sets whether users can request partial seasons. |
 | `-e LOG_LEVEL=:info` | The log level for the logging backend. This can be changed for debugging purposes. One of trace `:debug` `:info` `:warn` `:error` `:fatal` `:report` |
-| `-e JAVA_OPTS=<not_set_by_default>` | For passing additional java options. |
+| `-e JAVA_OPTS=` | For passing additional java options. |
 | `-v /config` | Contains all relevant configuration files. |
 
 ## Environment variables from files (Docker secrets)
