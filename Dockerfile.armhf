@@ -1,4 +1,6 @@
-FROM ghcr.io/linuxserver/baseimage-alpine:arm32v7-3.15
+# syntax=docker/dockerfile:1
+
+FROM ghcr.io/linuxserver/baseimage-alpine:arm32v7-3.17
 
 # set version label
 ARG BUILD_DATE
@@ -8,6 +10,6 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="nemchik"
 
 # copy local files
-COPY root/ /
+COPY root-armhf/ /
 
 # This Doplarr image does not support 32 bit ARM due to lack of available OS packages
