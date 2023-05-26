@@ -77,6 +77,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "25.05.23:", desc: "Rebase to Alpine 3.18." }
   - { date: "18.12.22:", desc: "Rebase to alpine 3.17, upgrade to openjdk17." }
   - { date: "01.05.22:", desc: "Remove `DISCORD__ROLE_ID` environment variable, see [Permissions Configuration](https://github.com/kiranshila/Doplarr/blob/main/docs/configuration.md#permissions)." }
   - { date: "30.01.22:", desc: "Variable adjustments." }
