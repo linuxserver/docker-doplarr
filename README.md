@@ -281,6 +281,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **25.05.23:** - Rebase to Alpine 3.18.
 * **18.12.22:** - Rebase to alpine 3.17, upgrade to openjdk17.
 * **01.05.22:** - Remove `DISCORD__ROLE_ID` environment variable, see [Permissions Configuration](https://github.com/kiranshila/Doplarr/blob/main/docs/configuration.md#permissions).
 * **30.01.22:** - Variable adjustments.
