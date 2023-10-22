@@ -39,7 +39,7 @@ jetty-http                9.4.35.v20201120  java-archive
 jetty-io                  9.4.35.v20201120  java-archive  
 jetty-util                9.4.35.v20201120  java-archive  
 jq                        1.6-r3            apk           
-jrt-fs                    17.0.8            java-archive  
+jrt-fs                    17.0.9            java-archive  
 libacl                    2.3.1-r3          apk           
 libattr                   2.5.1-r4          apk           
 libbsd                    0.11.7-r1         apk           
@@ -62,7 +62,7 @@ ncurses-terminfo-base     6.4_p20230506-r0  apk
 netcat-openbsd            1.219-r1          apk           
 nghttp2-libs              1.57.0-r0         apk           
 oniguruma                 6.9.8-r1          apk           
-openjdk17-jre-headless    17.0.8_p7-r0      apk           
+openjdk17-jre-headless    17.0.9_p8-r0      apk           
 p11-kit                   0.24.1-r2         apk           
 p11-kit-trust             0.24.1-r2         apk           
 pretty                    1.1.1             java-archive  
