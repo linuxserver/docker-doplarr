@@ -35,7 +35,7 @@ param_env_vars:
   - { env_var: "SONARR__URL", env_value: "http://localhost:8989", desc: "Specify your Sonarr URL. Leave blank if using Overseerr." }
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Contains all relevant configuration files." }
+  - { vol_path: "/config", vol_host_path: "/path/to/{{ project_name }}/config", desc: "Persistent config files" }
 param_usage_include_ports: false
 param_device_map: false
 cap_add_param: false
@@ -77,6 +77,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "23.12.23:", desc: "Rebase to Alpine 3.19."}
   - { date: "25.05.23:", desc: "Rebase to Alpine 3.18." }
   - { date: "18.12.22:", desc: "Rebase to alpine 3.17, upgrade to openjdk17." }
   - { date: "01.05.22:", desc: "Remove `DISCORD__ROLE_ID` environment variable, see [Permissions Configuration](https://github.com/kiranshila/Doplarr/blob/main/docs/configuration.md#permissions)." }
