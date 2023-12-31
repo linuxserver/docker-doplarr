@@ -82,7 +82,7 @@ tools.analyzer.jvm        1.2.2             java-archive
 tools.logging             1.1.0             java-archive  
 tools.reader              1.3.6             java-archive  
 truss                     1.6.0             java-archive  
-tzdata                    2023c-r1          apk           
+tzdata                    2023d-r0          apk           
 utmps-libs                0.1.2.1-r1        apk           
 websocket-api             9.4.35.v20201120  java-archive  
 websocket-client          9.4.35.v20201120  java-archive  
