@@ -28,7 +28,7 @@ pipeline {
     DEV_DOCKERHUB_IMAGE = 'lsiodev/doplarr'
     PR_DOCKERHUB_IMAGE = 'lspipepr/doplarr'
     DIST_IMAGE = 'alpine'
-    DIST_TAG = '3.18'
+    DIST_TAG = '3.19'
     MULTIARCH='true'
     CI='true'
     CI_WEB='false'
