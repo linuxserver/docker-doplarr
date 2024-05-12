@@ -12,6 +12,7 @@ c-ares                    1.27.0-r0             apk
 ca-certificates           20240226-r0           apk             
 ca-certificates-bundle    20240226-r0           apk             
 camel-snake-kebab         0.4.3                 java-archive    
+catatonit                 0.2.0-r0              apk             
 cheshire                  5.11.0                java-archive    
 clojure                   1.11.1                java-archive    
 config                    1.2.0                 java-archive    
