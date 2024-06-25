@@ -28,7 +28,6 @@ pipeline {
     DEV_DOCKERHUB_IMAGE = 'lsiodev/doplarr'
     PR_DOCKERHUB_IMAGE = 'lspipepr/doplarr'
     DIST_IMAGE = 'alpine'
-    DIST_TAG = '3.19'
     MULTIARCH='true'
     CI='true'
     CI_WEB='false'
@@ -36,7 +35,7 @@ pipeline {
     CI_SSL='false'
     CI_DELAY='120'
     CI_DOCKERENV='TEST_RUN=1'
-    CI_AUTH='user:password'
+    CI_AUTH=''
     CI_WEBPATH=''
   }
   stages {
