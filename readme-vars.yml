@@ -45,6 +45,8 @@ opt_param_env_vars:
   - { env_var: "LOG_LEVEL", env_value: ":info", desc: "The log level for the logging backend. This can be changed for debugging purposes. One of trace `:debug` `:info` `:warn` `:error` `:fatal` `:report`" }
   - { env_var: "JAVA_OPTS", env_value: "", desc: "For passing additional java options." }
 
+readonly_supported: true
+
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
