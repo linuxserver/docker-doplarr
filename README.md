@@ -70,6 +70,11 @@ Extra java options can be passed with the JAVA_OPTS environment variable, eg `-e
 
 Review and adjust any [Optional Settings](https://github.com/kiranshila/Doplarr#optional-settings) from Doplarr's readme.
 
+## Read-Only Operation
+
+This image can be run with a read-only container filesystem. For details please [read the docs](https://docs.linuxserver.io/misc/read-only/).
+
+
 ## Usage
 
 To help you get started creating a container from this image you can either use docker-compose or the docker cli.
@@ -168,6 +173,7 @@ Containers are configured using parameters passed at runtime (such as those abov
 | `-e LOG_LEVEL=:info` | The log level for the logging backend. This can be changed for debugging purposes. One of trace `:debug` `:info` `:warn` `:error` `:fatal` `:report` |
 | `-e JAVA_OPTS=` | For passing additional java options. |
 | `-v /config` | Persistent config files |
+| `--read-only=true` | Run container with a read-only filesystem. Please [read the docs](https://docs.linuxserver.io/misc/read-only/). |
 
 ## Environment variables from files (Docker secrets)
 
