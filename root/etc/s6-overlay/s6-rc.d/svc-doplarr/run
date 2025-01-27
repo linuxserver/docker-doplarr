@@ -21,7 +21,14 @@ IFS=" " read -r -a RUN_ARRAY <<<"${JAVA_OPTS}"
 
 cd /app/doplarr/bin || exit
 
-exec \
-    s6-setuidgid abc java \
-    "${RUN_ARRAY[@]}" \
-    -jar /app/doplarr/bin/doplarr.jar
+if [[ -z ${LSIO_NON_ROOT_USER} ]]; then
+    exec \
+        s6-setuidgid abc java \
+        "${RUN_ARRAY[@]}" \
+        -jar /app/doplarr/bin/doplarr.jar
+else
+    exec \
+        java \
+        "${RUN_ARRAY[@]}" \
+        -jar /app/doplarr/bin/doplarr.jar
+fi

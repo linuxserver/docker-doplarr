@@ -5,6 +5,8 @@
 mkdir -p \
     /config
 
-# permissions
-lsiown -R abc:abc \
-    /config
+if [[ -z ${LSIO_NON_ROOT_USER} ]]; then
+    # permissions
+    lsiown -R abc:abc \
+        /config
+fi
