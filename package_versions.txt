@@ -25,7 +25,7 @@ coreutils                 9.5-r2            apk
 coreutils-env             9.5-r2            apk             
 coreutils-fmt             9.5-r2            apk             
 coreutils-sha512sum       9.5-r2            apk             
-curl                      8.11.1-r0         apk             
+curl                      8.12.0-r0         apk             
 data.json                 2.3.1             java-archive    
 data.priority-map         1.1.0             java-archive    
 doplarr                   UNKNOWN           java-archive    
@@ -46,11 +46,11 @@ jetty-http                9.4.35.v20201120  java-archive
 jetty-io                  9.4.35.v20201120  java-archive    
 jetty-util                9.4.35.v20201120  java-archive    
 jq                        1.7.1-r0          apk             
-jrt-fs                    17.0.13           java-archive    
+jrt-fs                    17.0.14           java-archive    
 libattr                   2.5.2-r2          apk             
 libbsd                    0.12.2-r0         apk             
-libcrypto3                3.3.2-r4          apk             
-libcurl                   8.11.1-r0         apk             
+libcrypto3                3.3.2-r5          apk             
+libcurl                   8.12.0-r0         apk             
 libffi                    3.4.6-r0          apk             
 libidn2                   2.3.7-r0          apk             
 libintl                   0.22.5-r0         apk             
@@ -58,8 +58,8 @@ libmd                     1.1.0-r0          apk
 libncursesw               6.5_p20241006-r3  apk             
 libproc2                  4.0.4-r2          apk             
 libpsl                    0.21.5-r3         apk             
-libssl3                   3.3.2-r4          apk             
-libtasn1                  4.19.0-r2         apk             
+libssl3                   3.3.2-r5          apk             
+libtasn1                  4.20.0-r0         apk             
 libunistring              1.2-r0            apk             
 linux-pam                 1.6.1-r1          apk             
 musl                      1.2.5-r8          apk             
@@ -68,7 +68,7 @@ ncurses-terminfo-base     6.5_p20241006-r3  apk
 netcat-openbsd            1.226.1.1-r0      apk             
 nghttp2-libs              1.64.0-r0         apk             
 oniguruma                 6.9.9-r0          apk             
-openjdk17-jre-headless    17.0.13_p11-r0    apk             
+openjdk17-jre-headless    17.0.14_p7-r0     apk             
 p11-kit                   0.25.5-r2         apk             
 p11-kit-trust             0.25.5-r2         apk             
 pretty                    1.1.1             java-archive    
