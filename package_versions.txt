@@ -4,7 +4,7 @@ alpine-baselayout         3.7.0-r0          apk
 alpine-baselayout-data    3.7.0-r0          apk             
 alpine-keys               2.5-r0            apk             
 alpine-release            3.22.1-r0         apk             
-apk-tools                 2.14.9-r2         apk             
+apk-tools                 2.14.9-r3         apk             
 bash                      5.2.37-r0         apk             
 brotli-libs               1.1.0-r2          apk             
 busybox                   1.37.0-r19        apk             
@@ -47,7 +47,7 @@ jetty-io                  9.4.35.v20201120  java-archive
 jetty-util                9.4.35.v20201120  java-archive    
 jq                        1.8.0-r0          apk             
 jrt-fs                    17.0.16           java-archive    
-libapk2                   2.14.9-r2         apk             
+libapk2                   2.14.9-r3         apk             
 libattr                   2.5.2-r2          apk             
 libbsd                    0.12.2-r0         apk             
 libcrypto3                3.5.2-r0          apk             
