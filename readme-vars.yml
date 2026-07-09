@@ -2,6 +2,8 @@
 
 # project information
 project_name: doplarr
+project_deprecation_status: true
+project_deprecation_message: "Please migrate to [doplarr_rs](https://github.com/linuxserver/docker-doplarr_rs)."
 project_url: "https://github.com/kiranshila/Doplarr"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/doplarr-logo_title.png"
 project_blurb: |
